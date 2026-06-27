@@ -1,0 +1,7 @@
+{
+  "trained_at": "2026-06-27T07:26:57.326096+00:00",
+  "rows_used": 0,
+  "threshold": 0.6,
+  "model_path": "D:\\T7\\aiops-anomaly-detection\\backend\\model_store\\isolation_forest.pkl",
+  "model_loaded": false
+}

@@ -1,0 +1,26 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+torchaudio
+pytorch-forecasting
+xgboost
+optuna
+mlflow
+shap
+river
+scikit-learn
+drain3
+fastapi
+uvicorn[standard]
+streamlit
+pandas
+pyarrow
+plotly
+scipy
+joblib
+statsmodels
+numpy
+pytest
+httpx
+matplotlib
+PyYAML

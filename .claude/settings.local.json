@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s /b \"D:\\\\T7\\\\aiops-anomaly-detection\")",
+      "Bash(findstr /v node_modules)",
+      "Bash(findstr /v __pycache__)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(docker-compose up *)",
+      "Bash(docker-compose ps *)",
+      "Bash(docker-compose logs *)",
+      "Bash(docker-compose down *)",
+      "Bash(curl -s http://localhost:8000/api/health)",
+      "Bash(docker exec *)",
+      "Bash(docker-compose build *)",
+      "Bash(python scripts/demo_scenario.py --baseline-ticks 0 --incident-ticks 6 --recovery-ticks 0 --interval 3)",
+      "mcp__Claude_in_Chrome__navigate",
+      "Bash(curl -s \"http://localhost:8000/api/alerts/recent?limit=3\")",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s \"http://localhost:8000/api/alerts/recent?limit=50\")",
+      "Bash(python -c ' *)",
+      "Bash(docker-compose restart *)",
+      "Bash(python scripts/demo_scenario.py --baseline-ticks 15 --incident-ticks 12 --recovery-ticks 0 --interval 5)",
+      "Bash(python scripts/demo_scenario.py --baseline-ticks 0 --incident-ticks 6 --recovery-ticks 0 --interval 4)",
+      "Bash(curl -s \"http://localhost:8000/api/alerts/recent?limit=1\")",
+      "Bash(python scripts/demo_scenario.py --baseline-ticks 0 --incident-ticks 4 --recovery-ticks 0 --interval 4)",
+      "Bash(python scripts/fire_anomaly.py --scenario cpu)",
+      "Bash(curl -s \"http://localhost:8000/api/metrics/services\")",
+      "Bash(curl -s \"http://localhost:8000/api/metrics/timeline?service_name=svc-payment&metric_name=cpu_usage&minutes=60\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Points: {len\\(d\\)}'\\); print\\(d[:2] if d else 'EMPTY'\\)\")",
+      "Bash(curl -s \"http://localhost:8000/api/metrics/timeline?service_name=anomod-compose-post-service&metric_name=latency_ms&minutes=60\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Points: {len\\(d\\)}'\\)\")",
+      "Bash(curl -s \"http://localhost:8000/api/metrics/timeline?service_name=svc-api-gateway&metric_name=latency_ms&minutes=60\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Points svc-api-gateway/latency_ms: {len\\(d\\)}'\\)\")",
+      "Bash(curl -s \"http://localhost:8000/api/metrics/timeline?service_name=svc-api-gateway&metric_name=request_latency&minutes=60\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Points svc-api-gateway/request_latency: {len\\(d\\)}'\\)\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'svc-payment/cpu_usage: {len\\(d\\)} points, latest={d[-1][\\\\\"timestamp\\\\\"] if d else \\\\\"none\\\\\"}'\\)\")"
+    ]
+  }
+}

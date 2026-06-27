@@ -1,0 +1,35 @@
+seeds:
+  python: 42
+  numpy: 42
+  torch: 42
+
+data:
+  rows: 1200
+  log_tfidf_features: 500
+  split:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+
+models:
+  isolation_forest:
+    n_estimators: 100
+    contamination_grid: [0.03, 0.05, 0.08, 0.10, 0.15]
+  autoencoder:
+    epochs: 4
+    batch_size: 64
+    learning_rate: 0.001
+    patience: 10
+  deep_svdd:
+    pretrain_epochs: 2
+    epochs: 3
+    batch_size: 64
+    learning_rate: 0.001
+  xgboost:
+    trials: 3
+    max_depth: 3
+    learning_rate: 0.1
+  tft:
+    epochs: 2
+  ensemble:
+    members: [autoencoder, svdd, xgboost]
